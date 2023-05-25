@@ -1,0 +1,47 @@
+{
+  "name": "whiskey-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "build": "npm run clean && npx hardhat clean && npx hardhat compile --config hardhat.config.js",
+    "deploy-matictest": "npx hardhat run --network matictestnet scripts/deploy.js",
+    "deploy-maticmain": "npx hardhat run --network maticmainnet scripts/deploy.js",
+    "test": "npx hardhat test",
+    "test1": "npx hardhat test test/integrationTest/Vault_test_case1.js",
+    "test2": "npx hardhat test test/integrationTest/Vault_test_case2.js",
+    "test3": "npx hardhat test test/integrationTest/Vault_test_case3.js",
+    "test-mock": "npx hardhat test test/mockTest/MockGains.test.js",
+    "test-v1": "npx hardhat test test/version1/version1.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaultka-Project/whiskey-contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vaultka-Project/whiskey-contracts/issues"
+  },
+  "homepage": "https://github.com/Vaultka-Project/whiskey-contracts#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3",
+    "@openzeppelin/hardhat-upgrades": "^1.24.0",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.2",
+    "hardhat": "^2.9.2",
+    "hardhat-gas-reporter": "^1.0.8"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@uniswap/v3-periphery": "^1.4.3",
+    "bignumber.js": "^9.1.1"
+  }
+}
